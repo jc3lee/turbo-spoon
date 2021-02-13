@@ -1,0 +1,31 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Roboto;
+    font-weight: 300;
+    src: local("Times New Roman"), url("../fonts/Roboto-Light.ttf") format("truetype");
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Roboto;
+    font-weight: 400;
+    src: local("Times New Roman"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Roboto;
+    font-weight: 700;
+    src: local("Times New Roman"), url("../fonts/Roboto-Bold.ttf") format("truetype");
+    font-display: swap;
+  }
+}
+
+.darken:hover {
+  filter: brightness(85%) contrast(115%);
+}
