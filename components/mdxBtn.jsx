@@ -3,7 +3,7 @@ const MdxBtn = ({ text = "click" }) => {
     console.log("clicked")
   }
   return (
-    <button className="text-xl capitalize py-1 px-4 rounded-sm border active:scale-95" onClick={handleClick}>{text}</button>
+    <button className="text-xl capitalize py-1 px-4 rounded-sm border-2 border-black transform duration-75 active:scale-95 focus:outline-none" onClick={handleClick}>{text}</button>
   )
 }
 

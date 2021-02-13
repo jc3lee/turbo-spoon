@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import getMatter from "gray-matter"
 import Link from "next/link"
 import { useEffect } from "react"
+import MdxBtn from "../components/mdxBtn"
 
 export default function Home({ postsList }) {
   useEffect(() => {
@@ -21,6 +22,7 @@ export default function Home({ postsList }) {
     <Layout>
       <div className="flex flex-col justify-center items-center w-full h-screen font-bot">
         <p className=" text-3xl">Hello World!</p>
+        <MdxBtn text="hihihi" />
         {
           postsList.map(post => (
             <Link key={post.slug} href={"/posts/" + post.slug}><a className="text-xl">{post.title}</a></Link>
