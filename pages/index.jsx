@@ -3,6 +3,7 @@ import path from "path"
 import Layout from "../components/layout"
 import getMatter from "gray-matter"
 import Link from "next/link"
+import { useEffect } from "react"
 
 export default function Home({ postsList }) {
   useEffect(() => {
