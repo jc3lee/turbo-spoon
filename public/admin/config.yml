@@ -4,9 +4,7 @@ backend:
 media_folder: "public/images/uploads" 
 public_folder: "/images/uploads"
 publish_mode: editorial_workflow
-site_url: https://objective-euler-69371b.netlify.app/
-display_url: https://objective-euler-69371b.netlify.app/
-logo_url: https://objective-euler-69371b.netlify.app/images/brand-logo.png
+logo_url: https://objective-euler-69371b.netlify.app/images/uploads/brand-logo-white.png
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
