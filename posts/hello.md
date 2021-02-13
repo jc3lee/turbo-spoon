@@ -5,6 +5,6 @@ author: JCLee
 
 # Hello
 
-<MdxBtn text={hehehe}/>
+<MdxBtn text="hehehe"/>
 
 World!

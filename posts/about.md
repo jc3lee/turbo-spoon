@@ -5,6 +5,6 @@ author: JCLee
 
 # About
 
-<MdxBtn text={hohoho}/>
+<MdxBtn text="hohoho"/>
 
 I'm JC
