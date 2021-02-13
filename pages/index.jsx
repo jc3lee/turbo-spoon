@@ -36,7 +36,7 @@ export async function getStaticProps() {
   const postsList = filenames.reduce((reducePostsList, f) => {
     const postString = fs.readFileSync(path.join("posts", f)).toString()
     const { data } = getMatter(postString)
-    reducePostsList.push({ title: data.title, slug: f.replace(".mdx", "") })
+    reducePostsList.push({ title: data.title, slug: f.replace(".md", "") })
     return reducePostsList
   }, [])
 

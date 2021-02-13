@@ -4,9 +4,14 @@ import path from "path"
 import getMatter from "gray-matter"
 import renderToString from "next-mdx-remote/render-to-string"
 import hydrate from "next-mdx-remote/hydrate"
+import MdxBtn from "../../components/mdxBtn"
+
+const components = { MdxBtn }
 
 const Post = ({ data, mdxContent }) => {
-  const content = hydrate(mdxContent)
+  const content = hydrate(mdxContent, {
+    components,
+  })
   return (
     <div>
       <Head>
@@ -23,7 +28,7 @@ export async function getStaticPaths() {
   const filenames = fs.readdirSync("posts")
   const paths = filenames.map(f => ({
     params: {
-      slug: f.replace(".mdx", "")
+      slug: f.replace(".md", "")
     }
   }))
 
@@ -34,9 +39,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const postString = fs.readFileSync(path.join("posts", slug + ".mdx")).toString()
+  const postString = fs.readFileSync(path.join("posts", slug + ".md")).toString()
   const { data, content } = getMatter(postString)
-  const mdxContent = await renderToString(content)
+  const mdxContent = await renderToString(content, {
+    components,
+  })
 
   return {
     props: {

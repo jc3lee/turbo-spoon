@@ -5,4 +5,6 @@ author: JCLee
 
 # Hello
 
+<MdxBtn text={hehehe}/>
+
 World!
