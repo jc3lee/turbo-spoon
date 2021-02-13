@@ -5,6 +5,17 @@ import getMatter from "gray-matter"
 import Link from "next/link"
 
 export default function Home({ postsList }) {
+  useEffect(() => {
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/"
+          })
+        }
+      })
+    }
+  }, [])
   return (
     <Layout>
       <div className="flex flex-col justify-center items-center w-full h-screen font-bot">
