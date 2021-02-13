@@ -1,9 +1,12 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
-
-# This line should *not* be indented
-media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+  branch: main 
+media_folder: "public/images/uploads" 
+public_folder: "/images/uploads"
+publish_mode: editorial_workflow
+site_url: https://objective-euler-69371b.netlify.app/
+display_url: https://objective-euler-69371b.netlify.app/
+logo_url: https://objective-euler-69371b.netlify.app/images/brand-logo.png
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
