@@ -26,6 +26,14 @@
   }
 }
 
+img {
+  height: auto;
+  display: block;
+  max-width: 100%;
+  max-height: calc(50vh + 180px);
+  border-radius: 4px;
+}
+
 .darken:hover {
   filter: brightness(85%) contrast(115%);
 }
