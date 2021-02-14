@@ -8,6 +8,10 @@ author: JCLee
 
 World!
 
-
-
 The king is here!
+
+![image](/images/uploads/brand-logo-white.png "jc")
+
+![](/images/uploads/brand-logo.png)
+
+# bibibi
